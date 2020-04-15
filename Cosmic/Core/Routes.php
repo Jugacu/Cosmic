@@ -78,16 +78,16 @@ class Routes extends Router
                 Router::get('/settings', 'Settings\Preferences@index');
                 Router::get('/settings/email', 'Settings\Email@index');
                 Router::get('/settings/password', 'Settings\Password@index');
-                Router::get('/settings/namechange', 'Settings\Namechange@index');
+//                Router::get('/settings/namechange', 'Settings\Namechange@index');
                 Router::get('/settings/preferences', 'Settings\Preferences@index');
                 Router::get('/settings/verification', 'Settings\Verification@index');
 
-                Router::get('/shop', 'Shop\Shop@index');
-                Router::get('/shop/club', 'Shop\Club@index');
-                Router::get('/shop/history', 'Shop\History@index');
-                Router::get('/shop/drawbadge', 'Shop\Drawbadge@index');
-                Router::get('/shop/{lang}/lang', 'Shop\Shop@index');
-                Router::get('/shop/offers/{offerid}', 'Shop\Offers@index');
+//                Router::get('/shop', 'Shop\Shop@index');
+//                Router::get('/shop/club', 'Shop\Club@index');
+//                Router::get('/shop/history', 'Shop\History@index');
+//                Router::get('/shop/drawbadge', 'Shop\Drawbadge@index');
+//                Router::get('/shop/{lang}/lang', 'Shop\Shop@index');
+//                Router::get('/shop/offers/{offerid}', 'Shop\Offers@index');
 
                 Router::get('/help/requests/view', 'Help\Requests@index');
                 Router::get('/help/requests/new', 'Help\Ticket@index');

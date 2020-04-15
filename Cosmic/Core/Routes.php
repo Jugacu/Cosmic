@@ -77,7 +77,7 @@ class Routes extends Router
                 Router::get('/client', 'Client\Client@client');
 
                 Router::get('/settings', 'Settings\Preferences@index');
-                Router::get('/settings/email', 'Settings\Email@index');
+//                Router::get('/settings/email', 'Settings\Email@index');
                 Router::get('/settings/password', 'Settings\Password@index');
 //                Router::get('/settings/namechange', 'Settings\Namechange@index');
                 Router::get('/settings/preferences', 'Settings\Preferences@index');

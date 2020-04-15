@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Admin;
 
-use App\Config;
+use App\example;
 use App\Helper;
 
 use App\Models\Admin;
@@ -112,7 +112,7 @@ class Help
         Admin::sendTicketMessage(Helper::filterString($message), $ticket->id, request()->player->id);
         Log::addHelpTicketLog(request()->player->id, $ticket->id, 'SEND', 'message');
 
-        if(Config::apiEnabled && request()->player->online) {
+        if(example::apiEnabled && request()->player->online) {
             HotelApi::execute('alertuser', array('user_id' => $ticket->player_id, 'message' => 'Er is gereageerd op je helpdesk ticket!'));
         }
 

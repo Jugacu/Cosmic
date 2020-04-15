@@ -1,7 +1,7 @@
 <?php
 namespace App\Models;
 
-use App\Config;
+use App\example;
 use App\Models\Admin;
 
 use PDO;

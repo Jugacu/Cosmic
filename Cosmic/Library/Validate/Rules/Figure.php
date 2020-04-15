@@ -1,7 +1,7 @@
 <?php
 namespace Library\Validate\Rules;
 
-use App\Config;
+use App\example;
 use Core\Locale;
 
 use Library\Validate\Rule;
@@ -29,7 +29,7 @@ class Figure extends Rule
     }
 
     public function figure($value) {
-        if(in_array(substr($value, strrpos($value, 'hr-')), Config::look['male']) ? substr($value, strrpos($value, 'hr-')) : Config::look['female']) {
+        if(in_array(substr($value, strrpos($value, 'hr-')), example::look['male']) ? substr($value, strrpos($value, 'hr-')) : example::look['female']) {
             return true;
         }
 

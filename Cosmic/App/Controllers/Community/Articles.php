@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Community;
 
-use App\Config;
+use App\example;
 use App\Helper;
 
 use App\Models\Community;

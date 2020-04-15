@@ -27,7 +27,7 @@ class Token
 
     public function getHash()
     {
-        return hash_hmac('sha512', $this->token, example::SECRET_TOKEN);
+        return hash_hmac('sha512', $this->token, Config::SECRET_TOKEN);
     }
 
     public static function authTicket($player_id)

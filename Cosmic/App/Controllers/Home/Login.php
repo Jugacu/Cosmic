@@ -2,7 +2,7 @@
 namespace App\Controllers\Home;
 
 use App\Auth;
-use App\example;
+use App\Config;
 use App\Core;
 use App\Hash;
 

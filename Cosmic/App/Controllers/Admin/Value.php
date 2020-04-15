@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Admin;
 
-use App\example;
+use App\Config;
 use App\Helper;
 use App\Models\Admin;
 use App\Models\Value as Values;
@@ -92,7 +92,7 @@ class Value
       
         $this->data = new stdClass();
         
-        $this->data->currencys = example::currencys;
+        $this->data->currencys = Config::currencys;
         $this->data->value = $value;
       
         Json::encode($this->data);

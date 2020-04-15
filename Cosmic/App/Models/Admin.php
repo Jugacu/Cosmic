@@ -1,7 +1,7 @@
 <?php
 namespace App\Models;
 
-use App\example;
+use App\Config;
 use PDO;
 use QueryBuilder;
 

@@ -2,7 +2,7 @@
 namespace App\Controllers\Client;
 
 use App\Core;
-use App\example;
+use App\Config;
 use App\Token;
 
 use App\Models\Api;
@@ -29,7 +29,7 @@ class Client
     {
         $this->data = new stdClass();
     
-        $reader = new Reader(__DIR__. example::vpnLocation);
+        $reader = new Reader(__DIR__. Config::vpnLocation);
 
         try {
             $this->record = $reader->asn(request()->getIp());

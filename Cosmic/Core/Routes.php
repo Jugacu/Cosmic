@@ -1,7 +1,7 @@
 <?php
 namespace Core;
 
-use App\example;
+use App\Config;
 
 use App\Middleware\AdminAuthMiddleware;
 use App\Middleware\AuthMiddleware;
@@ -184,7 +184,7 @@ class Routes extends Router
             });
         });
       
-        if(example::debug) {
+        if(Config::debug) {
             Router::error(function(Request $request, \Exception $exception) {
                 response()->json(['error' => $exception->getMessage(), 'code'  => $exception->getCode()]);
             });

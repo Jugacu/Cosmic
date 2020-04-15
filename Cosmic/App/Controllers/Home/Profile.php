@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Home;
 
-use App\example;
+use App\Config;
 
 use App\Models\Community;
 use App\Models\Player;

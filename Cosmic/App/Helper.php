@@ -1,7 +1,7 @@
 <?php
 namespace App;
 
-use App\example;
+use App\Config;
 
 use App\Models\Permission;
 use App\Models\Player;
@@ -57,9 +57,9 @@ class Helper
 
     public static function timediff($timestamp, $type = null)
     {
-        Date::setLocale(example::language);
+        Date::setLocale(Config::language);
         $convert = ($timestamp - time());
-        $date = new Date(time() - $convert, example::region);
+        $date = new Date(time() - $convert, Config::region);
 
         return $type == null ? $date->ago() : $date->timespan();
     }

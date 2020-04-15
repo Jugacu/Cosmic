@@ -1,12 +1,12 @@
 <?php
-use App\example;
+use App\Config;
 use Core\Routes;
 use Core\QueryBuilder;
 
 include_once __DIR__ . '/../Core/Helper.php';
 include_once __DIR__ . '/../vendor/autoload.php';
 
-if(example::debug) {
+if(Config::debug) {
     ini_set("display_errors", 1);
 }
 
@@ -21,7 +21,7 @@ session_start();
  */
 
 new Querybuilder;
-new example;
+new Config;
 
 /**
  *  Dispatch URI

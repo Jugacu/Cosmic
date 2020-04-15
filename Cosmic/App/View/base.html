@@ -1,6 +1,6 @@
 {% extends "permissions.html" %}{% set set_permission = 'homepage' %}{% block base %}{% if load is not defined %}
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,15 +12,15 @@
     <title>{{title}} - {{site.sitename}}</title>
 
     <meta name="description"
-          content="Virtual world for young people where you can make and meet friends. Meet and make friends, chat with others, create your own avatar, design your own room for free and much more ...">
+          content="Habbo Hotel es juego multijugador latino para jóvenes, donde podrás conocer a muchísima gente, crear tu propia habitación con un mobiliario ilimitado, con Créditos, HC y Furnis totálmente gratis! Pero la diversión no termina ahí, siempre hay eventos muy divertidos para que te entretengas y ganes Rares.">
     <meta name="keywords"
-          content="cosmic, {{site.sitename}}, virtual, world, social network, free, community, avatar, chat, online, teen, roleplaying, join, social, groups, forums, safe, play, games, online, friends, teens, rare, rare meubi, collect, make, collect, contact, meubi, furniture, pets, furnish room, share, expression, badges, hangout, music, celebrity, VIP visits, celebs, mmo, mmorpgs, massive multiplayer, dox , dox hotel, dox hotel, space hotel, space hotel, space, sunnie, sunnie day, sunnieday, habbo, HABBO, habbo hotel, habboo, habbo city, habbocity, cool, virtual world, vip, retro, retro hotel, habbo retro, free , free habbo, holo">
+          content="Habbo, Habbo Hotel, Habbo Latino, Habbo-Hotel, Furnis gratis, Creditos gratis, gratis, chat, jugar, jugar, {{site.sitename}}, kekoland.es, habbo gratis, todo gratis, furnis gratis habbo, habbo holo, créditos gratis, hartico, habbo artico, habbo hartico, habbolandia, habbopvp, habbo pvp, habbolatino, habbo latino, habboparaiso, habbo paraiso, habbo kekos, habbokekos, habbomundo, habbocorp, habboci, habbostorm, habbo fantasy, habbo fenix, habbo mundo, habbo lan, habbo hartico, habbo apk, habbo alfa, hartico.nl, hartico.us, habboartico.com, hlat.me, hlat, iboom, lavvos">
 
-    <meta property="og:title" content="{{site.sitename}}">
+    <meta property="og:title" content="Haz nuevos amigos, crea tus salas, habbo ya es pasado - {{site.sitename}}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{site.domain}}">
     <meta property="og:image" content="/assets/images/summary-picture.png">
-    <meta property="og:description" content="Virtual world where you can make and meet friends.">
+    <meta property="og:description" content="Bienvenido a {{site.sitename}}, haz nuevas amistades de todo el mundo, crea tus juegos, crea tu avatar, ¡TODO ES GRATIS!">
     <meta property="og:site_name" content="{{site.sitename}}">
 
     <!-- CSS -->
@@ -37,6 +37,7 @@
     <script src="/assets/js/jquery-3.2.1.min.js"></script>
     <script src="/assets/js/jquery.ui.touch-punch.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
+	<script data-ad-client="ca-pub-9537437913640844" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
     <script>
     var Site = {
@@ -104,33 +105,32 @@
 </div>
 
 <div id="about-dialog" class="login-popup zoom-anim-dialog mfp-hide">
-    <h1 class="aside-title">{{site.sitename}}</h1>
-    <p>{{locale_base.thanks_for_playing}} {{site.shortname}}!<br>{{site.shortname}} {{locale_base.made_with_love}}
-        ♥<br><br>
-    <h4>Cosmic 2.0.0</h4>{{locale_base.credits}}
-    </p>
-
-    <h5>{{locale_base.and_all}} {{site.shortname}}'s ♥</h5>
-</div>
+        <h1 class="aside-title">Créditos</h1>
+            <h4>Cosmic 2.2</h4>{{locale_base.credits}}
+			<h4>Arcturus Morningstar 2.3.1</h4>{{locale_base.credits_emu}}
+			<h4>Kekoland.es</h4>{{locale_base.credits_kekoland}} {{site.shortname}} {{locale_base.credits_kekoland_names}}
+        </p>
+        <h5>{{locale_base.and_all}} {{site.shortname}} ♥</h5>
+    </div>
 
 {% if player is empty %}
 <div id="login-dialog" class="login-popup zoom-anim-dialog mfp-hide">
-    <h3 class="aside-title">Log in {{site.sitename}}</h3>
+    <h3 class="aside-title">Iniciar sesión</h3>
     <div class="login-form">
         <label for="login-username-input-target" class="username-input">
             <input type="text" name="username" class="rounded-input blue-active" id="login-username-input-target"
-                   placeholder="{{site.shortname}}{{locale_base.login_name}}..." required>
+                   placeholder="{{locale_base.login_name}}" required>
             <i class="flaticon-user-1"></i>
         </label>
         <label for="login-password-input-target" class="password-input">
             <input type="password" name="password" class="rounded-input blue-active"
-                   id="login-password-input-target" placeholder="{{locale_base.login_password}}..." autocomplete="off"
+                   id="login-password-input-target" placeholder="{{locale_base.login_password}}" autocomplete="off"
                    required>
             <i class="flaticon-padlock"></i>
         </label>
-        <a href="password/claim" class="claim-password" data-close-popup="true"
-           style="margin-top:1px">{{locale_base.login_lost_password}}</a>
-        <button type="submit" class="rounded-button blue plain" id="login-request">Log in</button>
+ <!--       <a href="password/claim" class="claim-password" data-close-popup="true"-->
+<!--          style="margin-top:1px">{{locale_base.login_lost_password}}</a>-->
+        <button type="submit" class="rounded-button blue plain" id="login-request">Conectar</button>
     </div>
 </div>
 {% endif %}
@@ -155,8 +155,7 @@
 
 <header class="header-container pixelated is-small">
     <div class="header-content">
-        <div class="logo"><a href="/home"><img src="https://habbofont.net/font/hma/{{site.shortname}}.gif"
-                                               style="margin-top: 30px;"></a></div>
+        <div class="logo"><a href="/home"><img src="assets/images/logo.png"></a></div>
         <div class="account-container">
             <div class="account-title">
                 {{locale_base.header_slogan2}}
@@ -170,7 +169,7 @@
                 {% else %}
                 <a href="/hotel" class="rounded-button white plain hotel-button">{{locale_base.header_to}}
                     {{site.sitename}}</a>
-                <button class="rounded-button white plain">{{online_count}} {{site.sitename}}'s online</button>
+                <button class="rounded-button white plain">{{online_count}} onlines</button>
                 {% endif %}
             </div>
         </div>
@@ -240,7 +239,7 @@
                 <span>{{player.username}}</span>
             </a>
             <ul class="navigation-submenu">
-                <li class="navigation-subitem"><a href="/hotel">{{locale_base.user_to}} {{site.sitename}}</a></li>
+                <li class="navigation-subitem"><a href="/hotel">{{locale_base.user_to}}</a></li>
                 <li class="navigation-subitem"><a
                         href="/profile/{{player.username}}">{{locale_base.user_profile}}</a></li>
                 <li class="navigation-subitem"><a href="/settings">{{locale_base.user_settings}}</a></li>
@@ -256,9 +255,9 @@
 </section>
 
 <footer class="footer-container">
-    <div class="footer-copyright">&copy; 2019 {{site.domain}} | <a href="/help/">{{locale_base.footer_helptool}}</a> |
+    <div class="footer-copyright">&copy; 2020 {{site.shortname}} | <a href="/help/">{{locale_base.footer_helptool}}</a> |
         <a
-                href="#" class="about-dialog-button">Cosmic</a></div>
+                href="#" class="about-dialog-button">Créditos</a></div>
 </footer>
 
 {% if player %}

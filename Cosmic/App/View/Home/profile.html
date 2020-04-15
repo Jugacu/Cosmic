@@ -51,7 +51,7 @@
             <div class="aside-content">
             {% if player %}
             <div class="form-group has-feedback">
-                <input type="text"  class="rounded-input blue-active addfeedreaction" placeholder="{% if data.player.username == player.username %}{{locale.guestbook_input}} {{data.player.username}}? {% else %}{{locale.guestbook_input_1}} {{data.player.username}} {{locale.guestbook_input_2}}{% endif %}" maxlength="50">
+                <input type="text"  class="rounded-input blue-active addfeedreaction" placeholder="{% if data.player.username == player.username %}{{locale.guestbook_input}} {{data.player.username}}? {% else %}{{locale.guestbook_input_1}}{% endif %}" maxlength="50">
                 <!--<span class="fas fa-camera feedback" aria-hidden="true"></span>!-->
             </div>
             {% endif %}

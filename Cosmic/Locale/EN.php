@@ -5,15 +5,15 @@ $GLOBALS['language'] = array (
     'website' => array (
         /*     App/View/base.html     */
         'base' => array(
-            'nav_home'              => 'Home',
+            'nav_home'              => 'Inicio',
 
-            'nav_community'         => 'Community',
-            'nav_news'              => 'News',
-            'nav_jobs'              => 'Jobs',
-            'nav_photos'            => 'Photos',
-            'nav_staff'             => 'Staff',
-            'nav_team'              => 'Team',
-            'nav_exchange'          => 'Marketplace',
+            'nav_community'         => 'Comunidad',
+            'nav_news'              => 'Noticias',
+            'nav_jobs'              => 'Vacantes', // ¿Vacantes o Rangos? Preguntar a Lorena por el nombre
+            'nav_photos'            => 'Fotos',
+            'nav_staff'             => 'Equipo',
+            'nav_team'              => 'Team', // Esta opción está deshabilitada, es como una página a parte donde saldrian más miembros del Equipo
+            'nav_exchange'          => 'Marketplace', // 2.2
 
             'nav_shop'              => 'shop',
             'nav_buy_points'        => Config::site['shortname'] . ' Shop',

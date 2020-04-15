@@ -2,7 +2,7 @@
 namespace Core;
 
 use App\Auth;
-use App\example;
+use App\Config;
 use App\Flash;
 
 use App\Models\Permission;
@@ -42,7 +42,7 @@ class View
         $args['load'] = true;
         echo json_encode(array(
             "id"            => $args['page'],
-            "title"         => (!empty($args['title']) ? $args['title'] . ' - ' . example::site['sitename'] : null),
+            "title"         => (!empty($args['title']) ? $args['title'] . ' - ' . Config::site['sitename'] : null),
             "content"       => self::getTemplate($template, $args, null, true),
             "replacepage"   => null
         ));
@@ -55,13 +55,13 @@ class View
         if ($twig === null) {
             $loader = new FilesystemLoader(dirname(__DIR__) . '/App/View');
             $twig = new Environment($loader, array(
-                'debug' => example::debug
+                'debug' => Config::debug
             ));
           
             $twig->addExtension(new DebugExtension());
             $twig->addExtension(new DateExtension());
 
-            $twig->addGlobal('site', example::site);
+            $twig->addGlobal('site', Config::site);
             $twig->addGlobal('publickey', \App\Models\Core::settings()->recaptcha_publickey ?? null);
 
             $twig->addGlobal('locale', Locale::get('website/' . (isset($args['page']) ? $args['page'] : null), true));

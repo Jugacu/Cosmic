@@ -1,12 +1,12 @@
 <?php
 namespace Core;
 
-use App\example;
+use App\Config;
 use Exception;
 
 class Cache
 {
-    private $_salt = example::SECRET_TOKEN.'_asteroid';
+    private $_salt = Config::SECRET_TOKEN.'_asteroid';
     private $_name;
     private $_dir;
     private $_extension;

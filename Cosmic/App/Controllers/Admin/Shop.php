@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Admin;
 
-use App\example;
+use App\Config;
 
 use App\Models\Admin;
 use App\Models\Log;

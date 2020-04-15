@@ -1,7 +1,7 @@
 <?php
 namespace App\Models;
 
-use App\example;
+use App\Config;
 use App\Core;
 use App\Hash;
 

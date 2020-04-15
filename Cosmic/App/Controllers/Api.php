@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 
-use App\example;
+use App\Config;
 
 use App\Models\Core;
 use App\Models\Room;

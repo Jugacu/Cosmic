@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Home;
 
-use App\example;
+use App\Config;
 use App\Auth;
 
 use App\Models\Player;
@@ -97,7 +97,7 @@ class Registration
     {
         View::renderTemplate('Home/registration.html', [
             'title' => Locale::get('core/title/registration'),
-            'looks' => example::look,
+            'looks' => Config::look,
             'page'  => 'registration',
             'referral' => ($referral) ? Player::getDataByUsername($referral, ['username']) : $referral
         ]);

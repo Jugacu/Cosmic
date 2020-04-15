@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Settings;
 
-use App\example;
+use App\Config;
 use App\Core;
 
 use App\Models\Core as Settings;

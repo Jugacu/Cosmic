@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Home;
 
-use App\example;
+use App\Config;
 
 use App\Models\Community;
 use App\Models\Player;
@@ -47,6 +47,6 @@ class Index
 
     public function configuration() {
         Header('Content-Type: text/javascript');
-        View::renderTemplate('configuration.html', ['debug' => (example::debug ? 'true' : 'false'), 'client' => example::client]);
+        View::renderTemplate('configuration.html', ['debug' => (Config::debug ? 'true' : 'false'), 'client' => Config::client]);
     }
 }

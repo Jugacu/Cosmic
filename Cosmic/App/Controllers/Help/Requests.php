@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Help;
 
-use App\example;
+use App\Config;
 use App\Helper;
 
 use App\Models\Help;

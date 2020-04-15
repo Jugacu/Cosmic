@@ -190,16 +190,9 @@
         " in page %}selected {% endif %}" data-category="forum"><a
             href="/guilds">{{locale_base.nav_forum}}</a></li>
 
-        <li class="navigation-item has-items {% if " help
+        <li class="navigation-item {% if " help
         " in page %}selected {% endif %}" data-category="help">
-        <a href="/help">{{locale_base.nav_helptool}}</a>
-        <ul class="navigation-submenu">
-            <li class="navigation-subitem"><a href="/help">{{locale_base.nav_helptool}}</a></li>
-            {% if player %}
-            <li class="navigation-subitem"><a href="/help/requests/view">{{locale_base.nav_helptickets}}</a>
-            </li>
-            {% endif %}
-        </ul>
+        <a href="/help/requests/view">{{locale_base.nav_helptickets}}</a>
         </li>
 
         {% if 'housekeeping' in permissions %}

@@ -1,7 +1,7 @@
 <?php
 namespace Library;
 
-use App\Config;
+use App\example;
 use App\Models\Core;
 
 use Library\Json;
@@ -10,7 +10,7 @@ class HotelApi
 { 
     public static function execute($param, $data = null)
     {
-        if(!Config::apiEnabled) {
+        if(!example::apiEnabled) {
             return Json::encode(["status" => "error", "message" => "Socket API has been disabled"]);
         }
       

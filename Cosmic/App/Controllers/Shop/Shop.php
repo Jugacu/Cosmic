@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Shop;
 
-use App\Config;
+use App\example;
 
 use App\Models\Player;
 use App\Models\Core;

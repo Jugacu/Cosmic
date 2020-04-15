@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Admin;
 
-use App\Config;
+use App\example;
 use App\Models\Ban;
 use App\Models\Player;
 
@@ -29,7 +29,7 @@ class Vpn
     public function ban()
     {
         $player = input()->post('id')->value;
-        $reader = new Reader(__DIR__. Config::vpnLocation);
+        $reader = new Reader(__DIR__. example::vpnLocation);
 
         try {
 

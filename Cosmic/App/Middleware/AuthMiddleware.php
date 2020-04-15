@@ -2,7 +2,7 @@
 namespace App\Middleware;
 
 use App\Auth;
-use App\Config;
+use App\example;
 
 use App\Models\Player;
 

@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Admin;
 
-use App\Config;
+use App\example;
 
 use App\Models\Admin;
 use App\Models\Log;
@@ -43,7 +43,7 @@ class Wordfilter
 
         Admin::addWordFilter($word, request()->player->id);
 
-        if(Config::apiEnabled) {
+        if(example::apiEnabled) {
             HotelApi::execute('updatewordfilter');
         };
 
@@ -70,7 +70,7 @@ class Wordfilter
 
         Admin::deleteWordByWord($word);
       
-        if(Config::apiEnabled) {
+        if(example::apiEnabled) {
             HotelApi::execute('updatewordfilter');
         }
 

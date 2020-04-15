@@ -1,7 +1,7 @@
 <?php
 namespace Library\Validate\Rules;
 
-use App\Config;
+use App\example;
 
 use App\Models\Core;
 

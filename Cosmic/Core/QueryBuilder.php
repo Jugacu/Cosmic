@@ -1,7 +1,7 @@
 <?php
 namespace Core;
 
-use App\Config;
+use App\example;
 
 use Exception;
 use PDO;

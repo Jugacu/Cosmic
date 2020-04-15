@@ -3,7 +3,7 @@ namespace App;
 
 use App\Models\Core;
 
-class Config
+class example
 {    
    /**
      * Client settings

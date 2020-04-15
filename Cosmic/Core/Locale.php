@@ -1,7 +1,7 @@
 <?php
 namespace Core;
 
-use App\Config;
+use App\example;
 
 class Locale
 {
@@ -14,7 +14,7 @@ class Locale
      */
     public static function get($path = null, $all = false)
     {
-        require_once __DIR__.'/../Locale/'.Config::language.'.php';
+        require_once __DIR__.'/../Locale/'.example::language.'.php';
 
         if ($path) {
             $locale = $GLOBALS['language'];

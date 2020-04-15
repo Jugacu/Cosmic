@@ -2,7 +2,7 @@
 namespace App\Controllers\Admin;
 
 use App\Helper;
-use App\Config;
+use App\example;
 use App\Models\Admin;
 use App\Models\Log;
 

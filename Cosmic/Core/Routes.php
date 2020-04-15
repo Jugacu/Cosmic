@@ -1,4 +1,5 @@
 <?php
+
 namespace Core;
 
 use App\Config;
@@ -22,30 +23,30 @@ class Routes extends Router
     public static function init()
     {
         Router::PartialGroup('/', function () {
-         
+
             Router::setDefaultNamespace('\App\Controllers');
-          
+
             Router::get('/assets/js/web/user_settings.js', 'Home\Index@configuration');
-          
+
             Router::partialGroup('/api/{callback}', function ($callback) {
                 Router::all('/{param}', 'Api@' . $callback);
                 Router::all('/', 'Api@' . $callback);
             });
-        
+
             Router::get('/', 'Home\Index@index')->setName('index.home');
             Router::get('/home', 'Home\Index@index');
             Router::get('/lost', 'Home\Lost@index')->setName('lost');
             Router::get('/disconnect', 'Home\Lost@index')->setName('index.home');
-            Router::get('/games/ranking', 'Games\Ranking@index'); 
+            Router::get('/games/ranking', 'Games\Ranking@index');
             Router::get('/jobs', 'Jobs\Jobs@index');
-          
+
             Router::get('/guilds', 'Community\Guilds\Home@index');
-     
+
             Router::get('/profile', 'Home\Proficle@profile');
             Router::get('/profile/{user}', 'Home\Profile@profile', ['defaultParameterRegex' => '[a-zA-Z0-9\d\-_=\?!@:\.,]+']);
-          
+
             Router::post('/profile/search', 'Home\Profile@search');
-          
+
             Router::get('/assets/js/web/web.locale.js', function () {
                 header('Content-Type: application/javascript');
                 return 'var Locale = ' . json_encode(Locale::get('website/javascript', true), true) . '';
@@ -54,17 +55,17 @@ class Routes extends Router
             /**
              *  When user is not logged in
              */
-          
+
             Router::group(['middleware' => NotLoggedInMiddleware::class, 'exceptionHandler' => ExceptionHandler::class], function () {
-              
+
                 Router::get('/registration/{name?}', 'Home\Registration@index');
                 Router::get('/facebook', 'Home\Login@facebook');
 
                 Router::get('/password/claim', 'Password\Claim@index');
                 Router::get('/password/reset/{token}', 'Password\Reset@index');
-              
+
             });
-          
+
             /**
              *  When user is logged in
              */
@@ -101,18 +102,18 @@ class Routes extends Router
                 Router::partialGroup('/guilds/post/{controller}/{action}', function ($controller, $action) {
                     Router::post('/', 'Community\Guilds\\' . ucfirst($controller) . '@' . $action)->addMiddleware(GuildMiddleware::class);
                 })->addMiddleware(ValidateMiddleWare::class);
-             
+
                 Router::get('/jobs/my', 'Jobs\Jobs@my');
                 Router::get('/jobs/{id}/apply', 'Jobs\Apply@index');
 
                 Router::get('/api/player/count', 'Client\Client@count');
-              
+
             });
 
             /**
              *  Add if page must be cached
              */
-          
+
             Router::group(['middleware' => CacheMiddleware::class, 'exceptionHandler' => ExceptionHandler::class], function () {
 
                 Router::get('/articles', 'Community\Articles@index');
@@ -120,42 +121,42 @@ class Routes extends Router
 
                 Router::get('/community/photos', 'Community\Photos@index');
                 Router::get('/community/staff', 'Community\Staff@index');
-                Router::get('/community/team', 'Community\Staff@team');
+//                Router::get('/community/team', 'Community\Staff@team');
 
                 Router::get('/community/fansites', 'Community\Fansites@index');
 
                 Router::get('/help', 'Help\Help@index');
                 Router::get('/help/{slug}', 'Help\Help@index', ['defaultParameterRegex' => '[\w\-]+']);
-              
+
             });
-          
+
             /**
              *  Handle post requests
              */
 
             Router::partialGroup('{directory}/{controller}/{action}', function ($directory, $controller, $action) {
-                 if(request()->getMethod() == "post"){
+                if (request()->getMethod() == "post") {
                     Router::post('/', ucfirst($directory) . '\\' . ucfirst($controller) . '@' . $action);
-                 }
+                }
             })->addMiddleware(ValidateMiddleWare::class);
-          
+
         })->addMiddleware(AuthMiddleware::class);
 
         /**
          *  Housekeeping routing
          */
-      
+
         Router::group(['prefix' => '/housekeeping', '', 'middleware' => AdminAuthMiddleware::class, 'exceptionHandler' => ExceptionHandler::class], function () {
-          
+
             Router::setDefaultNamespace('\App\Controllers\Admin');
-          
+
             Router::get('/', 'Dashboard@view');
             Router::get('/permissions/get/commands', 'Permissions@getpermissioncommands');
 
             /**
              *  Controller views
              */
-          
+
             Router::partialGroup('/{controller}/{action}', function ($controller, $action) {
                 Router::get('/view/{user}', 'Remote@user', ['defaultParameterRegex' => '[a-zA-Z0-9\d\-_=\?!@:\.,]+']);
                 Router::get('/view', ucfirst($controller) . '@' . $action);
@@ -165,7 +166,7 @@ class Routes extends Router
             /**
              *  API post params
              */
-          
+
             Router::partialGroup('/api/{param1}/{param2}', function ($param1, $param2) {
                 Router::post('/', ucfirst($param1) . '@' . $param2)->addMiddleware(PermissionMiddleware::class);
             })->addMiddleware(ValidateMiddleWare::class);
@@ -173,23 +174,23 @@ class Routes extends Router
             /**
              *  Search post params
              */
-          
+
             Router::partialGroup('/search/get/{action}', function ($action) {
                 Router::get('/', 'Search@' . $action);
             });
-          
+
             Router::get('/assets/admin/js/locale.js', function () {
                 header('Content-Type: application/javascript');
                 return 'var Locale = ' . json_encode(Locale::get('housekeeping/javascript', true), true) . '';
             });
         });
-      
-        if(Config::debug) {
-            Router::error(function(Request $request, \Exception $exception) {
-                response()->json(['error' => $exception->getMessage(), 'code'  => $exception->getCode()]);
+
+        if (Config::debug) {
+            Router::error(function (Request $request, \Exception $exception) {
+                response()->json(['error' => $exception->getMessage(), 'code' => $exception->getCode()]);
             });
         }
-      
+
         Router::start();
     }
 }

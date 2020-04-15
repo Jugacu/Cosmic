@@ -4,3 +4,4 @@ vendor/*
 composer.phar
 composer.lock
 App/Config.php
+.env

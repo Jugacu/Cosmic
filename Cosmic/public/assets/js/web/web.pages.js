@@ -1667,10 +1667,10 @@ function WebPageForumInterface(main_page) {
             visiblePages: 10,
             pageVariable: 'page',
             href: true,
-            first: 'Eerste',
-            prev: 'Vorige',
-            last: 'Laatste',
-            next: 'Volgende'
+            first: 'Inicio',
+            prev: 'Anterior',
+            last: 'Último',
+            next: 'Siguiente'
         });
     };
 

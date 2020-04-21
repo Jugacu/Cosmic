@@ -124,11 +124,11 @@ var remote = function() {
                    },
                    columns: [{
                        field: "type",
-                       title: "Type",
+                       title: "Tipo",
                        width: 75
                    }, {
                        field: "message",
-                       title: "Message",
+                       title: "Mensaje",
                        width: 350
                    }, {
                        field: "timestamp",
@@ -171,14 +171,14 @@ var remote = function() {
                         width: 75
                     }, {
                         field: "username",
-                        title: "Username",
+                        title: "Nombre de usuario",
                         width: 100,
                         template: function(data) {
                             return '<span class="kt-font"><a href="#" class="kt-user-card-v2__name" data-toggle="modal" data-target="#actionModal"  data-id="' + data.username + '">' + data.username +  '</a>';
                         }
                     }, {
                         field: "type",
-                        title: "Type",
+                        title: "Tipo",
                         width: 85
                     }, {
                         field: "value",
@@ -234,21 +234,21 @@ var remote = function() {
                        sortable: "desc"
                    }, {
                        field: "username",
-                       title: "Username",
+                       title: "Nombre de usuario",
                        width: 200,
                        template: function(data) {
                            return '<span class="kt-font"><a href="#" class="kt-user-card-v2__name" data-toggle="modal" data-target="#actionModal" data-id="' + data.username + '">' + data.username + '</a></span>';
                        }
                    }, {
                        field: "ip_address",
-                       title: "IP Adress",
+                       title: "Última IP de conexión / IP de registro",
                        width: 250,
                        template: function(data) {
                            return '<span class="kt-font">' + data.iplast + ' / ' + data.ipreg + '</span>';
                        }
                    }, {
                        field: "last_login",
-                       title: "Last visit",
+                       title: "Último inicio de sesión",
                        width: 175
                    }]
                 }), $("#kt_datatable_reload_clones").on("click", function() {
@@ -288,11 +288,11 @@ var remote = function() {
                        sortable: "desc"
                    }, {
                        field: "new_name",
-                       title: "New name",
+                       title: "Nuevo nombre de usuario",
                        width: 200
                    }, {
                        field: "old_name",
-                       title: "Old name",
+                       title: "Antiguo nombre de usuario",
                        width: 250
                    }, {
                        field: "timestamp",
@@ -333,7 +333,7 @@ var remote = function() {
                    },
                    columns: [{
                        field: "user_one",
-                       title: "From / To",
+                       title: "De / A",
                        width: 120,
                        template: function(data) {
                            return '<span class="kt-font">' + data.user_one_id.username + ' / ' + data.user_two_id.username + '</span>';
@@ -415,14 +415,14 @@ var remote = function() {
                        }
                    }, {
                        field: "new_mail",
-                       title: "New mail",
+                       title: "Nuevo correo electrónico",
                        width: 220,
                        template: function(data) {
                            return '<span class="kt-font">' + data.new_mail + '</span>';
                        }
                    }, {
                        field: "old_mail",
-                       title: "Old mail",
+                       title: "Antiguo correo electrónico",
                        width: 220,
                        template: function(data) {
                            return '<span class="kt-font">' + data.old_mail + '</span>';
@@ -482,7 +482,7 @@ var remote = function() {
                        }
                    }, {
                        field: "name",
-                       title: "Name",
+                       title: "Nombre",
                        width: 200,
                        // callback function support for column rendering
                        template: function(data) {
@@ -490,7 +490,7 @@ var remote = function() {
                        }
                    }, {
                        field: "description",
-                       title: "Description",
+                       title: "Descripción",
                        width: 350,
                        template: function(data) {
                            return '<span class="kt-font">' + data.description + '</span>';
@@ -532,18 +532,18 @@ var remote = function() {
                         sortable: "desc"
                     }, {
                         field: "user_staff_id",
-                        title: "Banned by",
+                        title: "Staff",
                         width: 100,
                            template: function(data) {
                                return '<span class="kt-font">' + data.user_staff_id.username + '</span>';
                            }
                     }, {
                         field: "ban_reason",
-                        title: "Reason",
+                        title: "Razón",
                         width: 350
                     }, {
                         field: "ban_expire",
-                        title: "Expire",
+                        title: "Fecha y hora de expiración (GMT+1)",
                     }]
                 }), $("#kt_datatable_reload_banlogs").on("click", function() {
                     $("#kt_datatable_banlogs").KTDatatable("reload")

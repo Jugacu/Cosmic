@@ -42,7 +42,7 @@ var home = function() {
                         }
                     }, {
                         field: "username",
-                        title: "Username",
+                        title: "Nombre de usuario",
                         width: 200,
                         template: function(data, i) {
                             var output = '\
@@ -60,14 +60,14 @@ var home = function() {
                         }
                     }, {
                         field: "lastip",
-                        title: "Last / Reg IP",
+                        title: "Última IP de conexión / IP de registro",
                         width: 250,
                         template: function(data) {
                             return '<span class="kt-font">' + data.ip_current + ' / ' + data.ip_register + '</span>';
                         }
                     }, {
                         field: "lastvisit",
-                        title: "Date",
+                        title: "Fecha de registro",
                         width: 130,
                         template: function(data) {
                             return '<span class="kt-font">' + data.last_login + '</span>';

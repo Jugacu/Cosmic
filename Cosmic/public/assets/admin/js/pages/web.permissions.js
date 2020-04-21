@@ -97,11 +97,11 @@ var permissions = function() {
                     width: 75
                 }, {
                     field: "rank_name",
-                    title: "Rank",
+                    title: "Rango",
                     width: 75
                 }, {
                     field: "rank_description",
-                    title: "Description"
+                    title: "Descripción"
                 }, {
                     field: "Action",
                     title: "Action",
@@ -234,7 +234,7 @@ var permissions = function() {
           
             //load permissions that they didnt have
             $('.targetPermission').select2({
-                placeholder: 'Select a permission',
+                placeholder: 'Elige un permiso',
                 width: '85%',
                 ajax: {
                     url: '/housekeeping/search/get/permission',
@@ -324,14 +324,14 @@ var permissions = function() {
                    }
                }, {
                    field: "description",
-                   title: "Description",
+                   title: "Descripción",
                    width: 500,
                    template: function(data) {
                        return '<span class="kt-font">' + data.description + '</span>';
                    }
                }, {
                   field: "Actions",
-                  title: "Actions",
+                  title: "Eliminar",
                   sortable: !1,
                   width: 110,
                   overflow: "visible",
@@ -426,7 +426,7 @@ var permissions = function() {
                     title: "Permission",
                 }, {
                     field: "description",
-                    title: "Description"
+                    title: "Descripción"
                 }]
             }), $("#kt_datatable_clear").on("click", function() {
                 $("#kt_datatable_console").html("")
@@ -510,7 +510,7 @@ var permissions = function() {
                         $("#serverPermissions").append(overview_template);
                     }
                   
-                    $("#rankName").html($("[name=rank_name]").val() + ' has almost been created!');
+                    $("#rankName").html('¡' + $("[name=rank_name]").val() + ' ya casi está terminado!');
                  
                 }
                 KTUtil.scrollTop()
@@ -565,7 +565,7 @@ jQuery(document).ready(function() {
   permissions.wizard();
   
   $('.targetRole').select2({
-      placeholder: 'Select a role',
+      placeholder: 'Elige un rango',
       width: '85%',
       ajax: {
           url: '/housekeeping/search/get/role',

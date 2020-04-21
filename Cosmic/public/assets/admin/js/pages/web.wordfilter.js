@@ -64,19 +64,19 @@ var wordFilter = function() {
                },
                columns: [{
                    field: "key",
-                   title: "Word"
+                   title: "Palabra"
                }, {
                    field: "hide",
-                   title: "Hidden"
+                   title: "Ocultar"
                }, {
                    field: "report",
-                   title: "Send report",
+                   title: "Reportar",
                }, {
                    field: "mute",
-                   title: "Give mute",
+                   title: "Mutear",
                }, {
                   field: "Actions",
-                  title: "Actions",
+                  title: "Eliminar",
                   sortable: !1,
                   width: 110,
                   overflow: "visible",
@@ -114,7 +114,7 @@ jQuery(document).ready(function() {
     wordFilter.loadwordFilter();
   
     $('.removeWord').select2({
-        placeholder: 'Select a word',
+        placeholder: 'Introducir palabra...',
         width: '80%',
         ajax: {
             url: '/housekeeping/search/get/wordfilter',

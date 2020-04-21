@@ -31,25 +31,25 @@ t = $("#kt_datatable_ban_logs").KTDatatable({
         width: 50
     }, {
         field: "user_id",
-        title: "User",
+        title: "Nombre de usuario",
         width: 100,
         template: function(data) {
             return '<span class="kt-font"><a href="#" class="kt-user-card-v2__name" data-toggle="modal" data-target="#actionModal"  data-id="' + data.user_id + '">' + data.user_id +  '</a>';
         }
     }, {
         field: "type",
-        title: "Type",
+        title: "Tipo",
         width: 75
     }, {
         field: "ban_reason",
-        title: "Reason",
+        title: "Razón",
         width: 250
     }, {
         field: "ban_expire",
-        title: "Expire"
+        title: "Fecha y hora de expiración (GMT+1)"
     }, {
         field: "user_staff_id",
-        title: "By"
+        title: "Staff"
     }]
 }), $("#kt_datatable_reload").on("click", function() {
     $("#kt_datatable_ban_logs").KTDatatable("reload")

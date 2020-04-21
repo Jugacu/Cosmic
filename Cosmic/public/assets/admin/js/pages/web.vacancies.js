@@ -51,24 +51,24 @@ var vacanies = function() {
                    width: 50
                }, {
                    field: "job",
-                   title: "Job",
+                   title: "Cargo",
                   template: function(data) {
                       return '<a href="#" data-toggle="modal" id="viewvacancies" data-target="#view-vacancies" data-value="' + data.id + '">' + data.job + '</a>'
                   }
                }, {
                     field: "applys",
-                    title: "Applys",
-                   width: 50
+                    title: "Interesados",
+                   width: 100
                }, {
                   field: "Actions",
-                  title: "Actions",
+                  title: "Acciones",
                   sortable: !1,
                   width: 75,
                   overflow: "visible",
                   textAlign: "left",
                   autoHide: !1,
                   template: function(data) {
-                      return '<a class="btn btn-sm btn-clean btn-icon btn-icon-sm" id="viewApply" title="view"><i class="flaticon-eye"></i></a> <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-sm delete" data-toggle="modal" data-target="#confirm-delete" title="Delete"><i class="flaticon2-trash" data-value="' + data.id + '"></i></a>'
+                      return '<a class="btn btn-sm btn-clean btn-icon btn-icon-sm" id="viewApply" title="Ver"><i class="flaticon-eye"></i></a> <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-sm delete" data-toggle="modal" data-target="#confirm-delete" title="Eliminar"><i class="flaticon2-trash" data-value="' + data.id + '"></i></a>'
                   }
               }]
             }), $("#kt_datatable_vacancies_reload").on("click", function() {
@@ -88,7 +88,7 @@ var vacanies = function() {
                 }
               
                 $('#view-vacancies').unbind().on('show.bs.modal', function(e) {
-                    $(".modal-title").html("Edit " + jobtitle);
+                    $(".modal-title").html("Editar " + jobtitle);
                     vacanies.edit(jobid);
                 });
               
@@ -106,7 +106,7 @@ var vacanies = function() {
         loadApplications: function(id, jobtitle) {
           
             $("#kt_datatable_vacancies").KTDatatable("destroy")
-            $(".kt-portlet__head-title").html("All vacancies for " + jobtitle);
+            $(".kt-portlet__head-title").html("Vacantes para " + jobtitle);
           
             var datatableVacancies = function() {
             if ($('#kt_datatable_vacancies').length === 0) {
@@ -143,25 +143,25 @@ var vacanies = function() {
                    width: 50
                }, {
                    field: "user_id",
-                   title: "Username",
+                   title: "Nombre de usuario",
               }, {
                     field: "firstname",
-                    title: "Firstname",
+                    title: "Nombre de usuario",
               }, {
                     field: "status",
-                    title: "Status",
+                    title: "Estado",
                     sortable: "desc",
                    width: 50
                }, {
                   field: "Actions",
-                  title: "Actions",
+                  title: "Acciones",
                   sortable: !1,
                   width: 75,
                   overflow: "visible",
                   textAlign: "left",
                   autoHide: !1,
                   template: function(data) {
-                      return '<a class="btn btn-sm btn-clean btn-icon btn-icon-sm" id="view" data-toggle="modal" data-target="#view-application" title="view"><i class="flaticon-eye"></i></a>'
+                      return '<a class="btn btn-sm btn-clean btn-icon btn-icon-sm" id="view" data-toggle="modal" data-target="#view-application" title="Ver"><i class="flaticon-eye"></i></a>'
                   }
               }]
             }), $("#kt_datatable_vacancies_reload").on("click", function() {
@@ -177,7 +177,7 @@ var vacanies = function() {
                 var id = $(e.target).closest('.kt-datatable__row').find('[data-field="id"]').text();
                 var firstname = $(e.target).closest('.kt-datatable__row').find('[data-field="firstname"]').text();
                 
-                $(".modal-title").html("Vacancie from " + firstname);
+                $(".modal-title").html("Solicitud de " + firstname);
               
                 vacanies.view(id);
             });
@@ -190,7 +190,7 @@ var vacanies = function() {
             self.ajax_manager.post("/housekeeping/api/vacancies/seejob", {
                 id: id
             }, function(result) {
-                $(".job-body").html("<b>My message</b><br /><br />" + result.job.message + "<br /><br />");
+                $(".job-body").html("<b>¿Por qué piensa que está capacitado para el cargo?</b><br /><br />" + result.job.message + "<br /><br />");
               
                 $(".monday").html(result.job.available_monday);
                 $(".tuesday").html(result.job.available_tuesday);

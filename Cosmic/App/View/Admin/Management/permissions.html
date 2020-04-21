@@ -1,5 +1,5 @@
 {% extends "Admin/base.html" %}
-{% block page %}Permissions{% endblock %}
+{% block page %}Permisos{% endblock %}
 {% block jsfile %}permissions{% endblock %}
 {% block body %}
 <div class="kt-subheader   kt-grid__item" id="kt_subheader">
@@ -11,10 +11,10 @@
          <div class="kt-subheader__wrapper">
                <a id="goBackWizard" class="btn btn-clean btn-icon-sm" style="display: none">
                <i class="la la-long-arrow-left"></i>
-               Back
+               Volver
                </a>
             <a href="#" class="btn kt-subheader__btn-primary">
-            Actions &nbsp;
+            Otras acciones &nbsp;
             </a>
             <div class="dropdown dropdown-inline" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Quick actions">
                <a href="#" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -29,20 +29,20 @@
                   <!--begin::Nav-->
                   <ul class="kt-nav">
                      <li class="kt-nav__head">
-                        Choose action:                                   
+                        Elige la acción:                                   
                         <i class="flaticon2-information" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more..."></i>
                      </li>
                      <li class="kt-nav__separator"></li>
                      <li class="kt-nav__item">
                         <a href="#" class="kt-nav__link permissionManagement">
                         <i class="kt-nav__link-icon flaticon2-drop"></i>
-                        <span class="kt-nav__link-text">Permission Management</span>
+                        <span class="kt-nav__link-text">Permisos de la WEB</span>
                         </a>
                      </li>
                      <li class="kt-nav__item">
                         <a href="#" class="kt-nav__link rankManagement">
                         <i class="kt-nav__link-icon flaticon2-drop"></i>
-                        <span class="kt-nav__link-text">Sub Rank Management</span>
+                        <span class="kt-nav__link-text">Permisos del servidor</span>
                         </a>
                      </li>
                   </ul>
@@ -89,7 +89,7 @@
          <div class="kt-portlet__head">
             <div class="kt-portlet__head-label">
                <h3 class="kt-portlet__head-title">
-                  Search role for permissions
+                  Selecciona el rango que desees para ver sus permisos
                </h3>
             </div>
          </div>
@@ -97,7 +97,7 @@
             <div class="input-group">
                <select name="element" class="form-control targetRole"></select>
                <div class="input-group-append">
-                  <input type="submit" value="Go!" class="btn btn-primary roleSearch">
+                  <input type="submit" value="Ir" class="btn btn-primary roleSearch">
                </div>
             </div>
          </div>
@@ -108,7 +108,7 @@
             <div class="kt-portlet__head">
                <div class="kt-portlet__head-label">
                   <h3 class="kt-portlet__head-title">
-                     Change permissions
+                     Cambiar permisos
                   </h3>
                </div>
             </div>
@@ -116,7 +116,7 @@
                <div class="input-group">
                   <select name="element" class="form-control targetPermission"></select>
                   <div class="input-group-append">
-                     <input type="submit" value="Go!" class="btn btn-primary permissionSearch">
+                     <input type="submit" value="Ir" class="btn btn-primary permissionSearch">
                   </div>
                </div>
             </div>
@@ -132,14 +132,14 @@
                <i class="kt-font-brand flaticon2-user"></i>
                </span>
                <h3 class="kt-portlet__head-title">
-                  Permissions
+                  Permisos
                </h3>
             </div>
             <div class="kt-portlet__head-toolbar">
                <div class="kt-portlet__head-wrapper">
                   <div class="col-md-8 kt-margin-b-20-tablet-and-mobile">
                      <div class="kt-input-icon kt-input-icon--left">
-                        <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
+                        <input type="text" class="form-control" placeholder="Buscar..." id="generalSearch">
                         <span class="kt-input-icon__icon kt-input-icon__icon--left">
                         <span><i class="la la-search"></i></span>
                         </span>
@@ -149,7 +149,7 @@
                   <div class="col-md-4 kt-tablet-and-mobile">
                      <div class="kt-form__group kt-form__group--inline">
                         <div class="kt-form__label">
-                           <button class="btn btn-secondary" type="button" id="kt_datatable_permission_reload">Reload</button>
+                           <button class="btn btn-secondary" type="button" id="kt_datatable_permission_reload">Cargar</button>
                         </div>
                      </div>
                   </div>
@@ -177,10 +177,10 @@
                      </div>
                      <div class="kt-wizard-v4__nav-label">
                         <div class="kt-wizard-v4__nav-label-title">
-                           Choose name
+                           Escoge un nombre
                         </div>
                         <div class="kt-wizard-v4__nav-label-desc">
-                           Create rank
+                           Nombre del rango
                         </div>
                      </div>
                   </div>
@@ -192,10 +192,10 @@
                      </div>
                      <div class="kt-wizard-v4__nav-label">
                         <div class="kt-wizard-v4__nav-label-title">
-                           Server permissions
+                           Permisos del servidor
                         </div>
                         <div class="kt-wizard-v4__nav-label-desc">
-                           Inside client
+                           Dentro del hotel
                         </div>
                      </div>
                   </div>
@@ -207,10 +207,10 @@
                      </div>
                      <div class="kt-wizard-v4__nav-label">
                         <div class="kt-wizard-v4__nav-label-title">
-                           Web permissions
+                           Permisos de la WEB
                         </div>
                         <div class="kt-wizard-v4__nav-label-desc">
-                           For access modules
+                           Categorías a las que tienen acceso en el Panel de Control
                         </div>
                      </div>
                   </div>
@@ -222,10 +222,10 @@
                      </div>
                      <div class="kt-wizard-v4__nav-label">
                         <div class="kt-wizard-v4__nav-label-title">
-                           Finish
+                           Último paso
                         </div>
                         <div class="kt-wizard-v4__nav-label-desc">
-                           Overview
+                           Vista previa de lo anteriormente seleccionado
                         </div>
                      </div>
                   </div>
@@ -241,12 +241,12 @@
                      <form class="kt-form" id="kt_form" novalidate="novalidate">
                         <!--begin: Form Wizard Step 1-->
                         <div class="kt-wizard-v4__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
-                           <div class="kt-heading kt-heading--md">Create rank</div>
+                           <div class="kt-heading kt-heading--md">Crear rango</div>
                            <div class="kt-form__section kt-form__section--first">
                               <div class="kt-wizard-v4__form">
                                  <div class="form-group">
-                                    <input type="text" class="form-control" name="rank_name" placeholder="Rank name" aria-describedby="fname-error">
-                                    <span class="form-text text-muted">The name you enter is also shown at the staff page on the website</span>
+                                    <input type="text" class="form-control" name="rank_name" placeholder="Nombre del rango" aria-describedby="fname-error">
+                                    <span class="form-text text-muted">El nombre que pongas aquí será como aparezca en la página 'Staff'</span>
                                  </div>
                               </div>
                            </div>
@@ -254,7 +254,7 @@
                         <!--end: Form Wizard Step 1-->
                         <!--begin: Form Wizard Step 2-->
                         <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
-                           <div class="kt-heading kt-heading--md">Setup your server permissions</div>
+                           <div class="kt-heading kt-heading--md">Otorga los comandos y permisos dentro del hotel</div>
                            <div class="kt-form__section kt-form__section--first">
                               {% set columns = 2 %}
                               {% for permission in permission_columns[8:] %}
@@ -283,9 +283,9 @@
                         <div class="kt-wizard-v4__content permissionTable" data-ktwizard-type="step-content">
                            <div class="row" style="margin-bottom: 10px">
                               <div class="col-lg-10">
-                                 <button class="btn btn-secondary" type="button" id="kt_datatable_reload">Reload</button>
-                                 <button class="btn btn-secondary" type="button" id="kt_datatable_check_all">Select all rows</button>
-                                 <button class="btn btn-secondary" type="button" id="kt_datatable_uncheck_all">Unselect all rows</button>
+                                 <button class="btn btn-secondary" type="button" id="kt_datatable_reload">Cargar</button>
+                                 <button class="btn btn-secondary" type="button" id="kt_datatable_check_all">Marcar todas las filas</button>
+                                 <button class="btn btn-secondary" type="button" id="kt_datatable_uncheck_all">Desmarcar todas las filas</button>
                               </div>
                            </div>
                            <div class="kt-portlet__body kt-portlet__body--fit">
@@ -299,14 +299,13 @@
                               <div class="kt-section__content kt-section__content--solid" style="margin-bottom: 20px">
                                  <p>
                                  <h3 id="rankName"></h3>
-                                 Below you will find a list with the specified requirements. When you have read this, press "create" to create the rank.
-                                 When the rank is created you will redirected to the a page where you can modify server commands.
-                              </div>
+                                 Abajo encontrarás una lista con todo lo que tendrá dicho rango. Cuando hayas leído todo, pulsa el botón 'Crear' para terminar. Cuándo el rango se cree serás redirigido a la página donde puedes modificar los comandos del hotel.
+								 </div>
                               <div class="accordion accordion-solid accordion-toggle-plus" id="serverPerm">
                                  <div class="card">
                                     <div class="card-header" id="headingOne6">
                                        <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne6" aria-expanded="false" aria-controls="collapseOne6">
-                                          <i class="flaticon-interface-7"></i> Server permissions
+                                          <i class="flaticon-interface-7"></i> Comandos y permisos dentro del hotel
                                        </div>
                                     </div>
                                     <div id="collapseOne6" class="collapse" aria-labelledby="headingOne6" data-parent="#serverPerm" style="">
@@ -315,8 +314,8 @@
                                              <thead class="thead-inverse">
                                                 <tr>
                                                    <th>#</th>
-                                                   <th>Permission</th>
-                                                   <th>Type</th>
+                                                   <th>Comando/Permiso</th>
+                                                   <th>Estado</th>
                                                 </tr>
                                              </thead>
                                              <tbody id="serverPermissions"></tbody>
@@ -329,7 +328,7 @@
                                  <div class="card">
                                     <div class="card-header" id="headingOne5">
                                        <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
-                                          <i class="flaticon-interface-7"></i> Web permissions
+                                          <i class="flaticon-interface-7"></i> Permisos de la WEB
                                        </div>
                                     </div>
                                     <div id="collapseOne1" class="collapse" aria-labelledby="headingOne5" data-parent="#webPerm" style="">
@@ -338,7 +337,7 @@
                                              <thead class="thead-inverse">
                                                 <tr>
                                                    <th>#</th>
-                                                   <th>Permission</th>
+                                                   <th>Permisos</th>
                                                 </tr>
                                              </thead>
                                              <tbody id="websitePermissions"></tbody>
@@ -353,13 +352,13 @@
                         <!--begin: Form Actions -->					
                         <div class="kt-form__actions">
                            <div class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
-                              Previous
+                              Volver
                            </div>
                            <div class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit">
-                              Create
+                              Crear
                            </div>
                            <div class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next">
-                              Next Step
+                              Siguiente
                            </div>
                         </div>
                         <!--end: Form Actions -->

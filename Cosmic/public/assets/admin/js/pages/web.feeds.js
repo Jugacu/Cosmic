@@ -45,34 +45,34 @@ var feeds = function() {
                         }
                     }, {
                         field: "from_username",
-                        title: "From user",
+                        title: "Remitente",
                         width: 100,
                         template: function(data) {
                             return '<span class="kt-font"><a href="#" data-toggle="modal" data-target="#actionModal" data-id="' + data.from_username + '">' + data.from_username + '</a></span>';
                         }
                     }, {
                         field: "message",
-                        title: "Message",
+                        title: "Mensaje",
                         width: 300,
                         template: function(data) {
                             return '<span class="kt-font">' + data.message + '</span>';
                         }
                     }, {
                         field: "to_username",
-                        title: "To user",
+                        title: "Receptor",
                         template: function(data) {
                             return '<span class="kt-font"><a href="#" data-toggle="modal" data-target="#actionModal" data-id="' + data.to_username + '">' + data.to_username + '</a></span>';
                         }
                     }, {
                         field: "timestamp",
-                        title: "Timestsamp",
+                        title: "Fecha y hora de publicación (GMT+1)",
                         width: 130,
                         template: function(data) {
                             return '<span class="kt-font">' + data.timestamp + '</span>';
                         }
                     }, {
                         field: "Actions",
-                        title: "Actions",
+                        title: "Eliminar",
                         sortable: !1,
                         width: 110,
                         overflow: "visible",

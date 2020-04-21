@@ -200,7 +200,7 @@ var roomSearch = function() {
                    sortable: "desc"
                }, {
                   field: "Actions",
-                  title: "Actions",
+                  title: "Acciones",
                   sortable: !1,
                   width: 110,  
                   overflow: "visible",
@@ -227,7 +227,7 @@ jQuery(document).ready(function() {
     roomSearch.loadRooms();
   
     $('.roomControl').select2({
-          placeholder: 'Select a room',
+          placeholder: 'Elige una sala',
           width: "90%",
           ajax: {
               url: '/housekeeping/search/get/rooms',

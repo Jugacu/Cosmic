@@ -43,42 +43,42 @@ var news = function() {
                         }
                     }, {
                         field: "title",
-                        title: "Title",
+                        title: "Título",
                         width: 200,
                         template: function(data) {
                             return '<span class="kt-font">' + data.title + '</span>';
                         }
                     }, {
                         field: "cat_name",
-                        title: "Category",
+                        title: "Categoría",
                         width: 75,
                         template: function(data) {
                             return '<span class="kt-font">' + data.cat_name + '</span>'
                         }
                     }, {
                         field: "author",
-                        title: "Author",
+                        title: "Autor",
                         width: 50,
                         template: function(data) {
                             return '<span class="kt-font">' + data.author + '</span>';
                         }
                     }, {
                         field: "timestamp",
-                        title: "Timestsamp",
+                        title: "Fecha y hora de origen (GMT+1)",
                         width: 130,
                         template: function(data) {
                             return '<span class="kt-font">' + data.timestamp + '</span>';
                         }
                     }, {
                         field: "Actions",
-                        title: "Actions",
+                        title: "Acciones",
                         sortable: !1,
                         width: 110,
                         overflow: "visible",
                         textAlign: "left",
                         autoHide: !1,
                         template: function() {
-                            return '<a class="btn btn-sm btn-clean btn-icon btn-icon-sm" id="editNews" title="Edit"><i class="flaticon2-edit"></i></a> <a class="btn btn-sm btn-clean btn-icon btn-icon-sm" id="deleteNews" data-toggle="modal" data-target="#confirm-delete" title="Delete"><i class="flaticon2-trash"></i></a>'
+                            return '<a class="btn btn-sm btn-clean btn-icon btn-icon-sm" id="editNews" title="Editar"><i class="flaticon2-edit"></i></a> <a class="btn btn-sm btn-clean btn-icon btn-icon-sm" id="deleteNews" data-toggle="modal" data-target="#confirm-delete" title="Eliminar"><i class="flaticon2-trash"></i></a>'
                         }
                     }]
                 });
@@ -159,20 +159,20 @@ var news = function() {
                         }
                     }, {
                         field: "category",
-                        title: "Category",
+                        title: "Categoría",
                         template: function(data) {
                             return '<span class="kt-font">' + data.category + '</span>';
                         }
                     }, {
                         field: "Actions",
-                        title: "Actions",
+                        title: "Acciones",
                         sortable: !1,
                         overflow: "visible",
                         width: 100,
                         textAlign: "left",
                         autoHide: !1,
                         template: function() {
-                            return '<a class="btn btn-sm btn-clean btn-icon btn-icon-sm" data-toggle="modal" data-target="#editCategoryModal" id="editCat" title="Edit"><i class="flaticon2-edit"></i></a> <a class="btn btn-sm btn-clean btn-icon btn-icon-sm" id="deleteCat" title="Delete"><i class="flaticon2-trash"></i></a>'
+                            return '<a class="btn btn-sm btn-clean btn-icon btn-icon-sm" data-toggle="modal" data-target="#editCategoryModal" id="editCat" title="Editar"><i class="flaticon2-edit"></i></a> <a class="btn btn-sm btn-clean btn-icon btn-icon-sm" id="deleteCat" title="Eliminar"><i class="flaticon2-trash"></i></a>'
                         }
                     }]
                 });
@@ -290,7 +290,7 @@ var news = function() {
                     $('[name=short_story]').val(result.news.short_story);
                     tinyMCE.activeEditor.setContent(result.news.full_story);
 
-                    $('.titleNews, .addNews').text('Edit News');
+                    $('.titleNews, .addNews').text('Editar');
                 } else {
                     $('[name=newsId]').val(0);
                     $('[name=title]').val("");
@@ -299,7 +299,7 @@ var news = function() {
                     $('[name=short_story]').val("");
                     tinyMCE.activeEditor.setContent("");
 
-                    $('.titleNews, .addNews').text('Add News');
+                    $('.titleNews, .addNews').text('Añadir');
                     $('#image-preview').css("background-image", "none");
                 }
             });

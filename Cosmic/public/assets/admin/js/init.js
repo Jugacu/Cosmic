@@ -10,7 +10,7 @@ var KTDashboard = function() {
             var loading = new KTDialog({
                 'type': 'loader',
                 'placement': 'top center',
-                'message': 'Loading ...'
+                'message': 'Cargando...'
             });
             loading.show();
 
@@ -25,7 +25,7 @@ var select2Interface = function() {
     return {
         init: function() {
             $('.remoteControl').select2({
-                placeholder: 'Select a user',
+                placeholder: 'Selecciona un usuario',
                 width: "100%",
                 ajax: {
                     url: '/housekeeping/search/get/playername',
@@ -45,7 +45,7 @@ var select2Interface = function() {
                 }
             });
             $('.chatControl').select2({
-                placeholder: 'Select a user',
+                placeholder: 'Selecciona un usuario',
                 width: "85%",
                 ajax: {
                     url: '/housekeeping/search/get/playername',
@@ -75,7 +75,7 @@ var blockPageInterfaceSubmit = function() {
                 overlayColor: "#000000",
                 type: "v2",
                 state: "primary",
-                message: "Processing..."
+                message: "Procesando..."
             }), setTimeout(function() {
                 KTApp.unblockPage()
             }, 2e3)
@@ -91,7 +91,7 @@ var blockPageInterface = function() {
                     overlayColor: "#000000",
                     type: "v2",
                     state: "primary",
-                    message: "Processing..."
+                    message: "Procesando..."
                 }), setTimeout(function() {
                     KTApp.unblockPage()
                 }, 2e3)
@@ -259,7 +259,7 @@ var showOnlinePlayers = function() {
                         }
                     }, {
                         field: "username",
-                        title: "Username",
+                        title: "Nombre de usuario",
                         width: 250,
                         template: function(data, i) {
                             var output = '\
@@ -277,7 +277,7 @@ var showOnlinePlayers = function() {
                         }
                     }, {
                         field: "lastip",
-                        title: "Last / Reg IP",
+                        title: "Última IP de conexión / IP de registro",
                         template: function(data) {
                             return '<span class="kt-font">' + data.ip_register + ' / ' + data.ip_current + '</span>';
                         }

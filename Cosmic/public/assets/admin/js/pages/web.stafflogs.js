@@ -31,22 +31,22 @@ t = $("#kt_datatable_staff_logs").KTDatatable({
         width: 75
     }, {
         field: "username",
-        title: "Username",
+        title: "Nombre de usuario",
         width: 100,
         template: function(data) {
             return '<span class="kt-font"><a href="#" class="kt-user-card-v2__name" data-toggle="modal" data-target="#actionModal"  data-id="' + data.username + '">' + data.username +  '</a>';
         }
     }, {
         field: "type",
-        title: "Type", 
+        title: "Tipo", 
         width: 85
     }, {
         field: "value",
-        title: "Data",
+        title: "Información",
         width: 350
     }, {
         field: "target",
-        title: "Target",
+        title: "Afectado",
         width: 100,
         template: function(data) {
             if(data.target !== null)
@@ -54,7 +54,7 @@ t = $("#kt_datatable_staff_logs").KTDatatable({
         }
     }, {
         field: "timestamp",
-        title: "Timestamp"
+        title: "Fecha y hora (GMT+1)"
     }]
 }), $("#kt_datatable_reload").on("click", function() {
     $("#kt_datatable_staff_logs").KTDatatable("reload")

@@ -56,18 +56,18 @@ var chatlogs = function() {
                         width: 75
                     }, {
                         field: "user_from_id",
-                        title: "Username",
+                        title: "Nombre de usuario",
                         width: 75,
                         template: function(data) {
                             return '<span class="kt-font"><a href="#" class="kt-user-card-v2__name" data-toggle="modal" data-target="#actionModal"  data-id="' + data.user_from_id + '">' + data.user_from_id + '</a></span>';
                         }
                     }, {
                         field: "message",
-                        title: "Message",
+                        title: "Mensaje",
                         width: 350
                     }, {
                         field: "timestamp",
-                        title: "Timestamp"
+                        title: "Fecha y hora (GMT+1)"
                     }]
                 });
 
@@ -80,7 +80,7 @@ var chatlogs = function() {
         },
       
         compareUsers: function (dataArray) {
-            $("#chatlogs .kt-portlet__head-title").html("Compare Logs by " +dataArray);
+            $("#chatlogs .kt-portlet__head-title").html("Chats de " +dataArray);
 
             var datatableCompare = function () {
 
@@ -117,22 +117,22 @@ var chatlogs = function() {
                     },
                    columns: [{
                         field: "name",
-                        title: "Type",
+                        title: "Tipo",
                         width: 75
                     }, {
                        field: "player",
-                       title: "Player",
+                       title: "Nombre de usuario",
                        width: 125,
                        template: function(data) {
                           return '<a href="#" class="kt-user-card-v2__name" data-toggle="modal" data-target="#actionModal" data-id="' + data.player + '">' + data.player + '</a>';
                        }
                    }, {
                        field: "message",
-                       title: "Message",
+                       title: "Mensaje",
                        width: 350
                    }, {
                        field: "timestamp",
-                       title: "timestamp",
+                       title: "Fecha y hora (GMT+1)",
                    }]
                 });
 
@@ -145,7 +145,7 @@ var chatlogs = function() {
         },
 
         initDatatable: function () {
-            $("#chatlogs .kt-portlet__head-title").html("All chatlogs");
+            $("#chatlogs .kt-portlet__head-title").html("Todos los chats");
           
             var datatableChatLogs = function() {
                 if ($('#kt_datatable_chatlogs').length === 0) {
@@ -174,22 +174,22 @@ var chatlogs = function() {
                     },
                     columns: [{
                         field: "type",
-                        title: "Type",
+                        title: "Tipo",
                         width: 75
                     }, {
                         field: "user_from_id",
-                        title: "Username",
+                        title: "Nombre de usuario",
                         width: 125,
                         template: function(data) {
                             return '<span class="kt-font"><a href="#" class="kt-user-card-v2__name" data-toggle="modal" data-target="#actionModal"  data-id="' + data.user_from_id + '">' + data.user_from_id + '</a></span>';
                         }
                     }, {
                         field: "message",
-                        title: "Message",
+                        title: "Mensaje",
                         width: 350
                     }, {
                         field: "timestamp",
-                        title: "Timestamp"
+                        title: "Fecha y hora (GMT+1)"
                     }]
                 }), $("#kt_datatable_reload").on("click", function() {
                     $("#kt_datatable_chatlogs").KTDatatable("reload")

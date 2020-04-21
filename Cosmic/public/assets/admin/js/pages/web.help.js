@@ -37,7 +37,7 @@ var help = function() {
                 overlayColor: "#000000",
                 type: "v2",
                 state: "primary",
-                message: "Processing..."
+                message: "Procesando..."
             });
 
             setTimeout(function() {
@@ -93,17 +93,17 @@ var help = function() {
                     '<div class="kt-portlet__head-toolbar">'  +
                        '<div class="kt-portlet__head-wrapper">'  +
                           '<select class="form-control bootstrap-select" id="status">'  +
-                             '<option value="open">Open</option>\n'  +
-                             '<option value="closed">Closed</option>\n'  +
-                             '<option value="in_treatment">In treatment</option>\n'  +
+                             '<option value="open">Abierto</option>\n'  +
+                             '<option value="closed">Cerrado</option>\n'  +
+                             '<option value="in_treatment">En resolución</option>\n'  +
                           '</select>'  +
                           '&nbsp;'  +
                           '<div class="kt-form__label">'  +
-                             '<button class="btn btn-secondary" type="button" id="goBack">Back</button>'  +
+                             '<button class="btn btn-secondary" type="button" id="goBack">Volver</button>'  +
                           '</div>'  +
                           '&nbsp;'  + 
                           '<div class="kt-input-icon kt-input-icon--left">'  +
-                             '<input type="text" class="form-control" placeholder="Search..." id="generalSearch">'  +
+                             '<input type="text" class="form-control" placeholder="Buscar..." id="generalSearch">'  +
                              '<span class="kt-input-icon__icon kt-input-icon__icon--left">'  +
                              '<span><i class="la la-search"></i></span>'  +
                              '</span>'  +
@@ -165,8 +165,8 @@ var help = function() {
                 {
                     var logs = result.logs[i];
 
-                    if(logs.type == "SEND") { var icon = "send" }
-                    if(logs.type == "CHANGE") { var icon = "refresh" }
+                    if(logs.type == "ENVIO") { var icon = "send" }
+                    if(logs.type == "CAMBIO A") { var icon = "refresh" }
                   
                     var notification_template = $(self.notification_tmp.replace(/{type}/g, logs.type)
                     .replace(/{timestamp}/g, logs.timestamp).replace(/{assistant}/g, logs.assistant)
@@ -228,39 +228,39 @@ var help = function() {
                    }
                }, {
                    field: "subject",
-                   title: "Subject",
+                   title: "Asunto",
                    template: function(data) {
                        return '<a href="#" class="viewTicket"><span class="kt-font">' + data.subject + '</span></a>';
                    }
                }, {
                    field: "username",
-                   title: "Reporter"
+                   title: "Nombre de usuario"
                }, {
                    field: "practitioner",
                    title: "Staff"
                }, {
                    field: "timestamp",
-                   title: "Timestamp"
+                   title: "Fecha y hora de resolución (GMT+1)"
                }, {
                   field: "status",
-                  title: "Status",
+                  title: "Estado",
                   sortable: "desc",
                   template: function(t) {
                     var e = {
                         "in_treatment": {
-                            title: "IN TREATMENT",
+                            title: "EN RESOLUCIÓN",
                             class: "kt-badge--warning"
                         },
                         "closed": {
-                            title: "CLOSED",
+                            title: "CERRADO",
                             class: " kt-badge--dark"
                         },
                         "open": {
-                            title: "OPEN",
+                            title: "ABIERTO",
                             class: " kt-badge--danger"
                         },
                         "wait_reply": {
-                            title: "WAITING",
+                            title: "EN ESPERA",
                             class: " kt-badge--info"
                         }
                     };

@@ -14,7 +14,7 @@ class LoggedInMiddleware implements IMiddleware
     {     
         if(!isset($request->player)) {
             if($request->isAjax()) { 
-                response()->json(["title" => "Oeps..", "dialog" => Locale::get('core/dialog/logged_in'), "loadpage" => "home"]);
+                response()->json(["title" => "Oops..", "dialog" => Locale::get('core/dialog/logged_in'), "loadpage" => "home"]);
             } else {
                 redirect('/');
             }

@@ -6,7 +6,7 @@
 <html lang="es" >
 <head>
    <meta charset="utf-8"/>
-   <title>{% if block('page') is defined  %} {{block('page')}} | {{site.sitename}}{% else %}Leet | Housekeeping{% endif %}</title>
+   <title>{% if block('page') is defined  %} {{block('page')}} - {{site.sitename}}{% else %}Panel de Control - {{site.sitename}}{% endif %}</title>
    <meta name="description" content="Content width content">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -85,7 +85,7 @@
          <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
             <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed "  data-ktheader-minimize="on" >
                <div class="kt-container  kt-container--fluid ">
-                  <div class="kt-header__brand " id="kt_header_brand">Housekeeping</div>
+                  <div class="kt-header__brand " id="kt_header_brand">Panel de Control</div>
                   <div class="kt-header__topbar">
                      <div class="kt-header__topbar-item kt-header__topbar-item--search dropdown"  id="kt_quick_search_toggle">
                         <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-lg">
@@ -93,7 +93,7 @@
                               <form method="get" class="kt-quick-search__form">
                                  <div class="input-group">
                                     <div class="input-group-prepend"><span class="input-group-text"><i class="flaticon2-search-1"></i></span></div>
-                                    <input type="text" class="form-control kt-quick-search__input" placeholder="Search...">
+                                    <input type="text" class="form-control kt-quick-search__input" placeholder="Buscar...">
                                     <div class="input-group-append"><span class="input-group-text"><i class="la la-close kt-quick-search__close"></i></span></div>
                                  </div>
                               </form>
@@ -104,16 +104,16 @@
                      </div>
                      <div class="kt-header__topbar-item kt-header__topbar-item--user">
                         <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
-                           <span class="kt-header__topbar-welcome kt-visible-desktop">Welcome,</span>
+                           <span class="kt-header__topbar-welcome kt-visible-desktop">Bienvenid@,</span>
                            <span class="kt-header__topbar-username kt-visible-desktop">{{player.username}}</span>
                            <span class="kt-header__topbar-icon kt-bg-brand kt-hidden"><b>{{player.username|slice(0,1)|upper}}</b></span>
                         </div>
                         <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-xl">
                            <div class="kt-notification">
                               <div class="kt-notification__custom kt-space-between">
-                                 <a href="#" class="btn btn-label btn-label-brand btn-sm btn-bold maintenance">Maintenance</a>
-                                 <a href="/hotel" class="btn btn-label btn-label-brand btn-sm btn-bold">Enter hotel</a>
-                                 <a href="/logout" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign out</a>
+                                 <a href="#" class="btn btn-label btn-label-brand btn-sm btn-bold maintenance">Mantenimiento</a>
+                                 <a href="/hotel" class="btn btn-label btn-label-brand btn-sm btn-bold">Entrar al hotel</a>
+                                 <a href="/logout" class="btn btn-label btn-label-brand btn-sm btn-bold">Cerrar sesión</a>
                               </div>
                            </div>
                         </div>
@@ -137,10 +137,10 @@
                                        <div class="kt-widget24__details">
                                           <div class="kt-widget24__info">
                                              <h4 class="kt-widget24__title">
-                                                Users online
+                                                Usuarios online
                                              </h4>
                                              <span class="kt-widget24__desc">
-                                             Online counter
+                                             Haz click para ver los usuarios online
                                              </span>
                                           </div>
                                           <span class="kt-widget24__stats kt-font-brand">
@@ -157,7 +157,7 @@
                                                 Staff online
                                              </h4>
                                              <span class="kt-widget24__desc">
-                                             Click see who's online
+                                             Número de Staffs online
                                              </span>
                                           </div>
                                           <span class="kt-widget24__stats kt-font-warning">
@@ -171,10 +171,10 @@
                                        <div class="kt-widget24__details">
                                           <div class="kt-widget24__info">
                                              <h4 class="kt-widget24__title">
-                                                Helptool tickets
+                                                Soporte al Usuario
                                              </h4>
                                              <span class="kt-widget24__desc">
-                                             Help requests in hotel
+                                             Peticiones de ayuda de la web
                                              </span>
                                           </div>
                                           <span class="kt-widget24__stats kt-font-danger">
@@ -188,10 +188,10 @@
                                        <div class="kt-widget24__details">
                                           <div class="kt-widget24__info">
                                              <h4 class="kt-widget24__title">
-                                                Hotel tickets
+                                                Reportes de la MT
                                              </h4>
                                              <span class="kt-widget24__desc">
-                                             Help requests hotel
+                                             Peticiones de ayuda dentro del hotel
                                              </span>
                                           </div>
                                           <span class="kt-widget24__stats kt-font-success">
@@ -211,14 +211,14 @@
                                      <i class="kt-font-brand flaticon2-user"></i>
                                      </span>
                                        <h3 class="kt-portlet__head-title">
-                                          Online players
+                                          Usuarios online
                                        </h3>
                                     </div>
                                     <div class="kt-portlet__head-toolbar">
                                        <div class="kt-portlet__head-wrapper">
                                           <div class="col-md-8 kt-margin-b-20-tablet-and-mobile">
                                              <div class="kt-input-icon kt-input-icon--left">
-                                                <input type="text" class="form-control" placeholder="Search..." id="searchOnlinePlayers">
+                                                <input type="text" class="form-control" placeholder="Buscar..." id="searchOnlinePlayers">
                                                 <span class="kt-input-icon__icon kt-input-icon__icon--left">
                                                  <span><i class="la la-search"></i></span>
                                                  </span>
@@ -227,7 +227,7 @@
                                           <div class="col-md-4 kt-tablet-and-mobile">
                                              <div class="kt-form__group kt-form__group--inline">
                                                 <div class="kt-form__label">
-                                                   <button class="btn btn-secondary" type="button" id="kt_datatable_online_reload">Reload</button>
+                                                   <button class="btn btn-secondary" type="button" id="kt_datatable_online_reload">Cargar</button>
                                                 </div>
                                              </div>
                                           </div>

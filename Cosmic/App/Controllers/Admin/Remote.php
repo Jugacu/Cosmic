@@ -66,7 +66,7 @@ class Remote
 
         if ($this->user->rank >= request()->player->rank) {
             Log::addStaffLog($this->user->id, 'No permissions for Remote Control', request()->player->id, 'error');
-            Flash::addMessage('You have no permissions!', FLASH::ERROR);
+            Flash::addMessage('¡No tienes permisos para esto!', FLASH::ERROR);
             redirect('/housekeeping');
         }
       

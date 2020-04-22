@@ -15,7 +15,7 @@ class Staff
 
         foreach ($ranks as $row) {
           
-            if(!Permission::exists('website_invisible_staff', $row->id)) {
+            if(!Permission::exists('website_invisible_staff', $row->id) && Permission::exists('website_staff_page', $row->id)) {
                 $row->users = Player::getDataByRank($row->id);
 
                 if (!empty($row->users) && is_array($row->users)) {
@@ -29,6 +29,31 @@ class Staff
         View::renderTemplate('Community/staff.html', [
             'title' => Locale::get('core/title/community/staff'),
             'page'  => 'community_staff',
+            'action' => 'staff',
+            'data'  => $ranks
+        ]);
+    }
+
+    public function collaborators()
+    {
+        $ranks = Permission::getRanks();
+
+        foreach ($ranks as $row) {
+
+            if(!Permission::exists('website_invisible_staff', $row->id) && Permission::exists('website_collab_page', $row->id)) {
+                $row->users = Player::getDataByRank($row->id);
+
+                if (!empty($row->users) && is_array($row->users)) {
+                    foreach ($row->users as $users) {
+                        $users->settings = Player::getSettings($users->id);
+                    }
+                }
+            }
+        }
+
+        View::renderTemplate('Community/staff.html', [
+            'title' => Locale::get('core/title/community/staff'),
+            'page'  => 'community_collab',
             'action' => 'staff',
             'data'  => $ranks
         ]);

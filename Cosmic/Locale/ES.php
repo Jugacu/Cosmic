@@ -12,6 +12,7 @@ $GLOBALS['language'] = array (
             'nav_jobs'              => 'Vacantes', // ¿Vacantes o Rangos? Preguntar a Lorena por el nombre
             'nav_photos'            => 'Fotos',
             'nav_staff'             => 'Equipo',
+			'nav_collab'            => 'Colaboradores',
 			'nav_team'              => 'Equipo 2', // Esta opción está deshabilitada, es como otra página de "Equipo", donde saldrian más miembros del Equipo que no estuviesen en "Equipo"
 			
             'nav_shop'              => 'shop', // La tienda está deshabilitada
@@ -204,6 +205,11 @@ $GLOBALS['language'] = array (
         ),
         'community_staff' => array (
             'title'       => 'Equipo staff',
+            'desc'        => 'Si alguna de tus dudas no puede ser resuelta consulta con cualquier miembro del equipo, ¡Te atenderemos con mucho gusto!',
+            'content_1'   => 'El equipo de ' . Config::site['shortname'] . ' es responsable de mantener el orden en el hotel, incluyendo promociones, eventos y cuidar de seguimiento de todas las quejas. Todos los miembros legítimos del Equipo de ' . Config::site['shortname'] . ' tienen el distintivo de identificación personal, la misma se puede ver arriba, así que no se deje engañar por personas que dicen ser miembros del personal, por eso mismo ' . Config::site['shortname'] . ' es el mejor Habbo de habla hispana de la web.',
+        ),
+        'community_collab' => array (
+            'title'       => 'Colaboradores',
             'desc'        => 'Si alguna de tus dudas no puede ser resuelta consulta con cualquier miembro del equipo, ¡Te atenderemos con mucho gusto!',
             'content_1'   => 'El equipo de ' . Config::site['shortname'] . ' es responsable de mantener el orden en el hotel, incluyendo promociones, eventos y cuidar de seguimiento de todas las quejas. Todos los miembros legítimos del Equipo de ' . Config::site['shortname'] . ' tienen el distintivo de identificación personal, la misma se puede ver arriba, así que no se deje engañar por personas que dicen ser miembros del personal, por eso mismo ' . Config::site['shortname'] . ' es el mejor Habbo de habla hispana de la web.',
         ),

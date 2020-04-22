@@ -3221,6 +3221,7 @@ input:-webkit-autofill {
 }
 
 /* Page - Staff Team */
+.page-container[data-page="community_collab"] .page-header,
 .page-container[data-page="community_staff"] .page-header {
     background-image: url(../images/web/pages/staff/banner.png);
     background-color: #6a2943;
@@ -3232,12 +3233,14 @@ input:-webkit-autofill {
     ;
 }
 
+.page-container[data-page="community_collab"] .members-container,
 .page-container[data-page="community_staff"] .members-container,
 .page-container[data-page="community_team"] .members-container,
 .page-container[data-page="shop_club"] .members-container {
     margin-top: 30px;
 }
 
+.page-container[data-page="community_collab"] .members-container .member-container:not(:first-child),
 .page-container[data-page="community_staff"] .members-container .member-container:not(:first-child),
 .page-container[data-page="community_team"] .members-container .member-container:not(:first-child),
 .page-container[data-page="shop_club"] .members-container .member-container:not(:first-child) {
@@ -3246,6 +3249,7 @@ input:-webkit-autofill {
     padding-top: 15px;
 }
 
+.page-container[data-page="community_collab"] .members-container .member-container .member-content,
 .page-container[data-page="community_staff"] .members-container .member-container .member-content,
 .page-container[data-page="community_team"] .members-container .member-container .member-content,
 .page-container[data-page="shop_club"] .members-container .member-container .member-content {
@@ -3253,6 +3257,7 @@ input:-webkit-autofill {
     color: #333;
 }
 
+.page-container[data-page="community_collab"] .members-container .member-container .member-content .member-avatar,
 .page-container[data-page="community_staff"] .members-container .member-container .member-content .member-avatar,
 .page-container[data-page="community_team"] .members-container .member-container .member-content .member-avatar,
 .page-container[data-page="shop_club"] .members-container .member-container .member-content .member-avatar {
@@ -3266,12 +3271,14 @@ input:-webkit-autofill {
     transition: background-color 0.2s ease 0s;
 }
 
+.page-container[data-page="community_collab"] .members-container .member-container .member-content:hover .member-avatar,
 .page-container[data-page="community_staff"] .members-container .member-container .member-content:hover .member-avatar,
 .page-container[data-page="community_team"] .members-container .member-container .member-content:hover .member-avatar,
 .page-container[data-page="shop_club"] .members-container .member-container .member-content:hover .member-avatar {
     background-color: #853a59;
 }
 
+.page-container[data-page="community_collab"] .members-container .member-container .member-content .member-details,
 .page-container[data-page="community_staff"] .members-container .member-container .member-content .member-details,
 .page-container[data-page="community_team"] .members-container .member-container .member-content .member-details,
 .page-container[data-page="shop_club"] .members-container .member-container .member-content .member-details {
@@ -3282,6 +3289,7 @@ input:-webkit-autofill {
     line-height: normal;
 }
 
+.page-container[data-page="community_collab"] .members-container .member-container .member-content .member-details .details-username,
 .page-container[data-page="community_staff"] .members-container .member-container .member-content .member-details .details-username,
 .page-container[data-page="community_team"] .members-container .member-container .member-content .member-details .details-username,
 .page-container[data-page="shop_club"] .members-container .member-container .member-content .member-details .details-username {
@@ -3290,6 +3298,7 @@ input:-webkit-autofill {
     margin-top: -2px;
 }
 
+.page-container[data-page="community_collab"] .members-container .member-container .member-content .member-details .details-function,
 .page-container[data-page="community_staff"] .members-container .member-container .member-content .member-details .details-function,
 .page-container[data-page="community_team"] .members-container .member-container .member-content .member-details .details-function,
 .page-container[data-page="shop_club"] .members-container .member-container .member-content .member-details .details-function {
@@ -3297,6 +3306,7 @@ input:-webkit-autofill {
     margin: -2px 0 6px;
 }
 
+.page-container[data-page="community_collab"] .members-container .member-container .member-content .member-details .details-motto,
 .page-container[data-page="community_staff"] .members-container .member-container .member-content .member-details .details-motto,
 .page-container[data-page="community_team"] .members-container .member-container .member-content .member-details .details-motto,
 .page-container[data-page="shop_club"] .members-container .member-container .member-content .member-details .details-motto {
@@ -3305,10 +3315,12 @@ input:-webkit-autofill {
     color: #828282;
 }
 
+.page-container[data-page="community_collab"] .members-container .member-container .member-content .member-status,
 .page-container[data-page="community_staff"] .members-container .member-container .member-content .member-status {
     width: 26px;
 }
 
+.page-container[data-page="community_collab"] .members-container .member-container .member-content .member-status .status-icon,
 .page-container[data-page="community_staff"] .members-container .member-container .member-content .member-status .status-icon {
     background-color: #c71d1d;
     -webkit-border-radius: 9px;
@@ -3319,6 +3331,7 @@ input:-webkit-autofill {
     display: block;
 }
 
+.page-container[data-page="community_collab"] .members-container .member-container .member-content .member-status .status-icon.online,
 .page-container[data-page="community_staff"] .members-container .member-container .member-content .member-status .status-icon.online {
     background-color: #38b54a;
 }

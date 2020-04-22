@@ -121,7 +121,7 @@ class Routes extends Router
 
                 Router::get('/community/photos', 'Community\Photos@index');
                 Router::get('/community/staff', 'Community\Staff@index');
-//                Router::get('/community/team', 'Community\Staff@team');
+                Router::get('/community/team', 'Community\Staff@team');
 
                 Router::get('/community/fansites', 'Community\Fansites@index');
 

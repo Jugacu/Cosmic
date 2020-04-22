@@ -53,7 +53,7 @@ class Staff
 
         View::renderTemplate('Community/staff.html', [
             'title' => Locale::get('core/title/community/staff'),
-            'page'  => 'community_collab',
+            'page'  => 'community_staff',
             'action' => 'staff',
             'data'  => $ranks
         ]);

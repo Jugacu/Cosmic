@@ -1,5 +1,5 @@
 {% extends "Admin/base.html" %}
-{% block page %}Help tickets{% endblock%}
+{% block page %}Tickets del Soporte{% endblock%}
 {% block jsfile %}help{% endblock %}
 {% block body %}
 <div class="row">
@@ -13,22 +13,22 @@
                <i class="flaticon2-graph"></i>
                </span>
                <h3 class="kt-portlet__head-title">
-                  Response to ticket 
+                  Responder al ticket
                </h3>
             </div>
          </div>
          <div class="kt-portlet__body">
-            <textarea name="message" style="font-size: 7px;" id="body-input"><br /><br /><b>Met vriendelijke groet,</b><br >{{player.username}} <i>({{player_rank.rank_name}})</i></textarea>
+            <textarea name="message" style="font-size: 7px;" id="body-input"><br /><br /><b>Querid@ usuari@,</b><br >{{player.username}} <i>({{player_rank.rank_name}})</i></textarea>
          </div>
          <div class="kt-portlet__foot">
             <div class="row align-items-center">
                <div class="col-lg-6 m--valign-middle">
-                  Action: 
+                  Acciones: 
                </div>
                <div class="col-lg-6 kt-align-right">
                   <input type="hidden" name="ticketId">
-                  <button type="submit" class="btn btn-brand addMessage ajaxLoad">Send message</button>
-                  <span class="kt-margin-left-10">or <a href="#" class="kt-link kt-font-bold">Cancel</a></span>
+                  <button type="submit" class="btn btn-brand addMessage ajaxLoad">Enviar mensaje</button>
+                  <span class="kt-margin-left-10">o <a href="#" class="kt-link kt-font-bold">Cancelar</a></span>
                </div>
             </div>
          </div>
@@ -40,7 +40,7 @@
          <div class="kt-portlet__head">
             <div class="kt-portlet__head-label">
                <h3 class="kt-portlet__head-title">
-                  Notifications
+                  Actividades
                </h3>
             </div>
          </div>
@@ -63,24 +63,24 @@
                <i class="kt-font-brand flaticon-paper-plane"></i>
                </span>
                <h3 class="kt-portlet__head-title">
-                 Help Tickets 
+                 Tickets de Soporte 
                </h3>
             </div>
             <div class="kt-portlet__head-toolbar">
                <div class="kt-portlet__head-wrapper">
                   <select class="form-control bootstrap-select" id="kt_form_status">
-                     <option value="">Open</option>
-                     <option value="closed">Closed</option>
-                     <option value="waiting">Waiting</option>
-                     <option value="in_treatment">In treatment</option>
+                     <option value="">Abiertos</option>
+                     <option value="closed">Resueltos</option>
+                     <option value="waiting">En espera</option>
+                     <option value="in_treatment">En resolución</option>
                   </select>
                   &nbsp;
                   <div class="kt-form__label">
-                     <button class="btn btn-secondary" type="button" id="kt_datatable_tickets_reload">Reload</button>
+                     <button class="btn btn-secondary" type="button" id="kt_datatable_tickets_reload">Cargar</button>
                   </div>
                   &nbsp;
                   <div class="kt-input-icon kt-input-icon--left">
-                     <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
+                     <input type="text" class="form-control" placeholder="Buscar..." id="generalSearch">
                      <span class="kt-input-icon__icon kt-input-icon__icon--left">
                      <span><i class="la la-search"></i></span>
                      </span>

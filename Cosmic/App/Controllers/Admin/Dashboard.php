@@ -52,11 +52,11 @@ class Dashboard
     public function maintenance()
     {
         if (!Permission::exists('housekeeping_permissions', request()->player->rank)) {
-            response()->json(["status" => "error", "message" => "You have no permissions to do this!"]);
+            response()->json(["status" => "error", "message" => "¡No tienes permisos para esto!"]);
         }
       
         $maintenance = Admin::saveSettings('maintenance', (Core::settings()->maintenance == "1") ? "0" : "1");
-        response()->json(["status" => "success", "message" => "Maintenance updated"]);
+        response()->json(["status" => "success", "message" => "¡El mantenimiento ha sido actualizado con éxito!"]);
     }
 
     public function view()

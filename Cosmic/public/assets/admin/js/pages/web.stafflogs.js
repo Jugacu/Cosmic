@@ -89,18 +89,18 @@ t = $("#kt_datatable_command_logs").KTDatatable({
     },
     columns: [{
         field: "username",
-        title: "Username",
+        title: "Nombre de usuario",
         width: 100,
         template: function(data) {
             return '<span class="kt-font"><a href="#" class="kt-user-card-v2__name" data-toggle="modal" data-target="#actionModal"  data-id="' + data.username + '">' + data.username +  '</a>';
         }
     }, {
         field: "params",
-        title: "Params", 
+        title: "Comando detallado", 
         width: 180
     }, {
         field: "command",
-        title: "Command",
+        title: "Comando",
         width: 400
     }, {
         field: "timestamp",

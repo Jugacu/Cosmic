@@ -186,17 +186,17 @@ var roomSearch = function() {
                    }
                }, {
                    field: "name",
-                   title: "Name",
+                   title: "Nombre",
                    width: 100
                }, {
                    field: "description",
-                   title: "Description"
+                   title: "Descripción"
                }, {
                    field: "owner_name",
-                   title: "Owner"
+                   title: "Dueñ@"
                }, {
                    field: "users",
-                   title: "Users",
+                   title: "Aforo",
                    sortable: "desc"
                }, {
                   field: "Actions",

@@ -89,7 +89,7 @@ class Help
         Admin::updateTicketStatus($action, $ticket->id);
         Log::addHelpTicketLog(request()->player->id, $ticket->id, 'CHANGE', $action);
 
-        response()->json(["status" => "success", "message" => "Ticket status has been updated!"]);
+        response()->json(["status" => "success", "message" => "¡El estado del ticket ha sido modificado con éxito!"]);
     }
 
     public function sendmessage()
@@ -113,10 +113,10 @@ class Help
         Log::addHelpTicketLog(request()->player->id, $ticket->id, 'SEND', 'message');
 
         if(Config::apiEnabled && request()->player->online) {
-            HotelApi::execute('alertuser', array('user_id' => $ticket->player_id, 'message' => 'Er is gereageerd op je helpdesk ticket!'));
+            HotelApi::execute('alertuser', array('user_id' => $ticket->player_id, 'message' => '¡Tu ticket acaba de ser respondido! Revisalo en la Herramienta de soporte de la web'));
         }
 
-        response()->json(["status" => "success", "message" => "Succesfully send a message to user"]);
+        response()->json(["status" => "success", "message" => "¡Se ha enviado el mensaje al usuario con éxito!"]);
     }
 
     public function view()

@@ -159,13 +159,13 @@ class Remote
       
         if(!Permission::exists('housekeeping_alert_user', request()->player->rank)) {
             Log::addStaffLog($player->id, 'No permissions to send alert', request()->player->id, 'error');
-            response()->json(["status" => "error", "message" => "You have no permissions!"]);
+            response()->json(["status" => "error", "message" => "¡No tienes permisos para esto!"]);
         }
 
         $alert_message = Admin::getAlertMessagesById(input()->post('reason')->value);
 
         if (!$player->online) {
-            response()->json(["status" => "error", "message" => "This user is offline!"]);
+            response()->json(["status" => "error", "message" => "El usuario está offline"]);
         }
 
         switch (input()->post('action')->value) {

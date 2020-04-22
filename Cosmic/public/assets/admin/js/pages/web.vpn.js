@@ -65,13 +65,13 @@ var vpnControl = function() {
                    }
                }, {
                    field: "added_by",
-                   title: "Added By",
+                   title: "Staff",
                    template: function(data) {
                        return '<span class="kt-font">' + data.added_by + '</span>';
                    }
               }, {
                   field: "Action",
-                  title: "Action",
+                  title: "Acción",
                   sortable: !1,
                   width: 110,  
                   overflow: "visible",

@@ -93,7 +93,7 @@ var permissions = function() {
                 },
                 columns: [{
                     field: "id",
-                    title: "Rank Id",
+                    title: "ID",
                     width: 75
                 }, {
                     field: "rank_name",
@@ -104,7 +104,7 @@ var permissions = function() {
                     title: "Descripción"
                 }, {
                     field: "Action",
-                    title: "Action",
+                    title: "Eliminar",
                     overflow: "visible",
                     autoHide: !1,
                     template: function() {
@@ -353,7 +353,7 @@ var permissions = function() {
                 let id = $(e.target).closest('.kt-datatable__row').find('[data-field="idp"]').text();
 
                 $('#confirm-delete').on('show.bs.modal', function(e) {
-                    $(".modal-title").html("Delete permission");
+                    $(".modal-title").html("¿Estás segur@?");
                     $(".btn-ok").unbind().click(function () {
                         permissions.deletePermission(id);
                     });
@@ -423,7 +423,7 @@ var permissions = function() {
                     textAlign: "center"
                 }, {
                     field: "permission",
-                    title: "Permission",
+                    title: "Permiso",
                 }, {
                     field: "description",
                     title: "Descripción"

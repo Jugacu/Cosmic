@@ -1,5 +1,5 @@
 {% extends "Admin/base.html" %}
-{% block page %}VPN Control{% endblock %}
+{% block page %}Baneo de VPN{% endblock %}
 {% block jsfile %}vpn{% endblock %}
 {% block body %}
 <div class="row">
@@ -8,7 +8,7 @@
             <div class="kt-portlet__head">
                 <div class="kt-portlet__head-label">
                     <h3 class="kt-portlet__head-title">
-                        Ban ASN by Player
+                        Banear ASN a través del usuario
                     </h3>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                 <div class="input-group">
                     <select name="element" class="form-control chatControl"></select>
                     <div class="input-group-append">
-                        <button class="btn btn-primary banByPlayer" type="submit">Ban!</button>
+                        <button class="btn btn-primary banByPlayer" type="submit">Banear</button>
                     </div>
                 </div>
             </div>
@@ -28,15 +28,15 @@
                 <div class="kt-portlet__head">
                     <div class="kt-portlet__head-label">
                         <h3 class="kt-portlet__head-title">
-                            IP lookup
+                            Revisar IP
                         </h3>
                     </div>
                 </div>
                 <div class="kt-portlet__body">
                     <div class="input-group">
-                        <input type="text" class="form-control" id="ip" placeholder="Enter IP">
+                        <input type="text" class="form-control" id="ip" placeholder="Introduce la IP">
                         <div class="input-group-append">
-                            <input type="submit" class="btn btn-primary banByIP" value="Ban!">
+                            <input type="submit" class="btn btn-primary banByIP" value="Banear">
                         </div>
                     </div>
                 </div>
@@ -53,14 +53,14 @@
                <i class="kt-font-brand flaticon2-user"></i>
                </span>
                     <h3 class="kt-portlet__head-title">
-                        VPN Blacklist
+                        Lista negra
                     </h3>
                 </div>
                 <div class="kt-portlet__head-toolbar">
                     <div class="kt-portlet__head-wrapper">
                         <div class="col-md-8 kt-margin-b-20-tablet-and-mobile">
                             <div class="kt-input-icon kt-input-icon--left">
-                                <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
+                                <input type="text" class="form-control" placeholder="Buscar..." id="generalSearch">
                                 <span class="kt-input-icon__icon kt-input-icon__icon--left">
                         <span><i class="la la-search"></i></span>
                         </span>
@@ -70,7 +70,7 @@
                         <div class="col-md-4 kt-tablet-and-mobile">
                             <div class="kt-form__group kt-form__group--inline">
                                 <div class="kt-form__label">
-                                    <button class="btn btn-secondary" type="button" id="kt_datatable_vpn_reload">Reload</button>
+                                    <button class="btn btn-secondary" type="button" id="kt_datatable_vpn_reload">Cargar</button>
                                 </div>
                             </div>
                         </div>

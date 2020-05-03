@@ -62,7 +62,6 @@ class View
             $twig->addExtension(new DateExtension());
 
             $twig->addGlobal('site', Config::site);
-            $twig->addGlobal('client', Config::client);
             $twig->addGlobal('publickey', \App\Models\Core::settings()->recaptcha_publickey ?? null);
 
             $twig->addGlobal('locale', Locale::get('website/' . (isset($args['page']) ? $args['page'] : null), true));

@@ -6,3 +6,4 @@ composer.lock
 App/Config.php
 .env
 public/tmp
+public/ads.txt
